@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+
+  alchemy-notify-to-discord:
+    container_name: alchemy-notify-to-discord
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/source
+    logging:
+      options:
+        max-size: "500k"
+    ports:
+      - "50018:50018"
