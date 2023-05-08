@@ -1,7 +1,7 @@
 # alchemy-notify-to-discord
 
 ## Environment Variables
-```sh
+```bash
 $ mv .example.env .env
 $ vim .env
 DATABASE_HOST=localhost
@@ -16,7 +16,7 @@ ERROR_WEBHOOK_URL=https://discord.com/api/webhooks/xxxx
 Execute ddl.sql to create tables.
 
 ## Starting the Server
-```sh
+```bash
 $ docker-compose up -d
 or
 $ ./run.sh
@@ -25,7 +25,7 @@ $ ./run.sh
 ## Registering Notify on Alchemy
 https://dashboard.alchemy.com/notify  
 Register NFT and Address, and set the WEBHOOK URL to:
-```sh
+```bash
 https://{your domain}/nft
 https://{your domain}/address
 ```
