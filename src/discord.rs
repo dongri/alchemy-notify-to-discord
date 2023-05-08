@@ -1,4 +1,4 @@
-use actix_web::web::Data;
+use actix_web::web;
 use deadpool_postgres::Pool;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
@@ -31,7 +31,7 @@ struct Discord {
 }
 
 pub async fn post_event_address(
-    db_pool: Data<Pool>,
+    db_pool: web::Data<Pool>,
     network: String,
     from_address: String,
     to_address: String,
@@ -120,7 +120,7 @@ pub async fn post_event_address(
 }
 
 pub async fn post_event_nft(
-    db_pool: Data<Pool>,
+    db_pool: web::Data<Pool>,
     network: String,
     contract_address: String,
     from_address: String,
