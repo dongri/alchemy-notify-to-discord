@@ -84,13 +84,13 @@ pub async fn post_event_address(
                 inline: false,
             },
             Field {
-                name: "Value".to_string(),
-                value: format!("{:?}", value),
+                name: "Asset".to_string(),
+                value: format!("{}", asset),
                 inline: false,
             },
             Field {
-                name: "Asset".to_string(),
-                value: format!("{:?}", asset),
+                name: "Value".to_string(),
+                value: format!("{}", value),
                 inline: false,
             },
             Field {
